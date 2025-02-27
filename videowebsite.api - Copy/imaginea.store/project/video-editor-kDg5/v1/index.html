@@ -15,51 +15,46 @@
     <link rel="stylesheet" href="css/videoPlayer129e.css?v=1.7">
     <link rel="stylesheet" href="css/style129e.css?v=1.7">
     <link rel="stylesheet" href="css/videoEditor129e.css?v=1.7">
-    <link rel="stylesheet" href="css/new-style129e.css?v=1.7"></head>
-    <body class="full-screen">
-            <form id="message-form"
-                style="display: flex; text-align: center; position: fixed; bottom: 60px; left: 55%; transform: translateX(-50%); z-index: 20; right: 0;max-height: 36px;">
-                <label for="message-input"></label><br>
-                <textarea id="message-input" name="message" class="message-input1"></textarea>
-                <input type="submit" value="Submit">
-                <input type="file" style="display: none;">
-                <button title="upload audio, video or any image supports mp3, mp4, etc"
-                    style="background-color: rgba(255, 255, 255, 0.5); color: white; padding: 5px; border-radius: 5px; display: flex; margin-right: 5px; max-width: 35px; max-height: 37px;">
-                    <span
-                        style="display: none; position: absolute; background-color: rgb(0, 166, 126); color: white; padding: 5px; border-radius: 5px;">upload
-                        most of the audio, video or any image and it supports mp3, mp4, etc</span><svg width="24" height="24"
-                        viewBox="0 0 24 24">
-                        <path   
-                            d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5s-2.24-5-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"></path>
-                    </svg>
-                </button>
-                <input type="file" style="display: none;">
-                <button title="Share"
-                    style="background-color: rgba(255, 255, 255, 0.5); color: white; padding: 5px; border-radius: 5px; display: flex; margin-right: 5px; max-width: 35px; max-height: 37px;">
-                    <span
-                        style="display: none; position: absolute; background-color: rgb(0, 166, 126); color: white; padding: 5px; border-radius: 5px; top: 70px;">Chat</span><svg
-                        width="24" height="24" viewBox="0 0 24 24">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"
-                            class="bi bi-chat-left-text" viewBox="0 0 16 16">
-                            <path
-                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
-                            <path
-                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"></path>
-                        </svg>
-                    </svg>
-                </button>
-                <input type="file" style="display: none;">
-                <button title="Share"
-                    style="background-color: rgba(255, 255, 255, 0.5); color: white; padding: 5px; border-radius: 5px; display: flex; margin-right: 5px; max-width: 35px; max-height: 37px;">
-                    <span
-                        style="display: none; position: absolute; background-color: rgb(0, 166, 126); color: white; padding: 5px; border-radius: 5px; top: 70px;">Share</span><svg
-                        width="24" height="24" viewBox="0 0 24 24">
-                        <path
-                            d="M 18 2 A 3 3 0 0 0 15 5 A 3 3 0 0 0 15.054688 5.5605469 L 7.9394531 9.7109375 A 3 3 0 0 0 6 9 A 3 3 0 0 0 3 12 A 3 3 0 0 0 6 15 A 3 3 0 0 0 7.9355469 14.287109 L 15.054688 18.439453 A 3 3 0 0 0 15 19 A 3 3 0 0 0 18 22 A 3 3 0 0 0 21 19 A 3 3 0 0 0 18 16 A 3 3 0 0 0 16.0625 16.712891 L 8.9453125 12.560547 A 3 3 0 0 0 9 12 A 3 3 0 0 0 8.9453125 11.439453 L 16.060547 7.2890625 A 3 3 0 0 0 18 8 A 3 3 0 0 0 21 5 A 3 3 0 0 0 18 2 z"></path>
-                    </svg>
-                </button>
-            </form>
+    <link rel="stylesheet" href="css/new-style129e.css?v=1.7">
+<link rel="stylesheet" href="style.css">
 
+</head>
+    <body class="full-screen">
+        
+        <form id="message-form"
+      style="display: flex; text-align: center; position: fixed; bottom: 60px; left: 55%; transform: translateX(-50%); z-index: 20; right: 0; max-height: 36px;">
+    <label for="message-input"></label><br>
+    <textarea id="message-input" name="message" class="message-input1"></textarea>
+    <input type="submit" value="Submit">
+    <input type="file" style="display: none;">
+    <button title="upload audio, video or any image supports mp3, mp4, etc"
+            style="padding: 5px; border-radius: 5px; display: flex; margin-right: 5px; max-width: 35px; max-height: 37px;">
+        <span style="display: none; position: absolute; padding: 5px; border-radius: 5px;">upload
+            most of the audio, video or any image and it supports mp3, mp4, etc</span>
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5s-2.24-5-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"></path>
+        </svg>
+    </button>
+    <input type="file" style="display: none;">
+    <button title="Share"
+            style="padding: 5px; border-radius: 5px; display: flex; margin-right: 5px; max-width: 35px; max-height: 37px;">
+        <span style="display: none; position: absolute; padding: 5px; border-radius: 5px; top: 70px;">Chat</span>
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
+                <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"></path>
+            </svg>
+        </svg>
+    </button>
+    <input type="file" style="display: none;">
+    <button title="Share"
+            style="padding: 5px; border-radius: 5px; display: flex; margin-right: 5px; max-width: 35px; max-height: 37px;">
+        <span style="display: none; position: absolute; padding: 5px; border-radius: 5px; top: 70px;">Share</span>
+        <svg width="24" height="24" viewBox="0 0 24 24">
+            <path d="M 18 2 A 3 3 0 0 0 15 5 A 3 3 0 0 0 15.054688 5.5605469 L 7.9394531 9.7109375 A 3 3 0 0 0 6 9 A 3 3 0 0 0 3 12 A 3 3 0 0 0 6 15 A 3 3 0 0 0 7.9355469 14.287109 L 15.054688 18.439453 A 3 3 0 0 0 15 19 A 3 3 0 0 0 18 22 A 3 3 0 0 0 21 19 A 3 3 0 0 0 18 16 A 3 3 0 0 0 16.0625 16.712891 L 8.9453125 12.560547 A 3 3 0 0 0 9 12 A 3 3 0 0 0 8.9453125 11.439453 L 16.060547 7.2890625 A 3 3 0 0 0 18 8 A 3 3 0 0 0 21 5 A 3 3 0 0 0 18 2 z"></path>
+        </svg>
+    </button>
+</form>
 
     <div class="close-wrapper"></div>
     <section class="all-content p-0">
@@ -447,19 +442,6 @@
     var videoUrls = [];
     var addButton = document.createElement("button");
     addButton.innerHTML = "Add Video";
-
-    // addButton.addEventListener('click', function() {
-    //   var video = document.createElement("input");
-    //   video.type = "file";
-    //   video.accept = "video/*";
-    //   video.onchange = function() {
-    //     var file = this.files[0];
-    //     var url = URL.createObjectURL(file);
-    //     videoUrls.push(url);
-    //     mergeVideos(numVideosToMerge);
-    //   };
-    //   video.click();
-    // });
 
         document.body.appendChild(addButton);
 
