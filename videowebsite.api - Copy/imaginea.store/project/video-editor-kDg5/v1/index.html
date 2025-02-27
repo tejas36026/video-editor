@@ -1,0 +1,978 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galactic Medias</title>
+    <link rel="icon" href="../../../images/favicon.html" type="image/png">
+    <link rel="stylesheet" href="css/fonts129e.css?v=1.7">
+    <link rel="stylesheet" href="css/bootstrap.min129e.css?v=1.7">
+    <link rel="stylesheet" href="css/jquery-ui.min129e.css?v=1.7">
+    <link rel="stylesheet" href="css/lightbox.min129e.css?v=1.7">
+    <link rel="stylesheet" href="css/spectrum.min129e.css?v=1.7">
+    <link rel="stylesheet" href="css/videoPlayer129e.css?v=1.7">
+    <link rel="stylesheet" href="css/style129e.css?v=1.7">
+    <link rel="stylesheet" href="css/videoEditor129e.css?v=1.7">
+    <link rel="stylesheet" href="css/new-style129e.css?v=1.7"></head>
+    <body class="full-screen">
+            <form id="message-form"
+                style="display: flex; text-align: center; position: fixed; bottom: 60px; left: 55%; transform: translateX(-50%); z-index: 20; right: 0;max-height: 36px;">
+                <label for="message-input"></label><br>
+                <textarea id="message-input" name="message" class="message-input1"></textarea>
+                <input type="submit" value="Submit">
+                <input type="file" style="display: none;">
+                <button title="upload audio, video or any image supports mp3, mp4, etc"
+                    style="background-color: rgba(255, 255, 255, 0.5); color: white; padding: 5px; border-radius: 5px; display: flex; margin-right: 5px; max-width: 35px; max-height: 37px;">
+                    <span
+                        style="display: none; position: absolute; background-color: rgb(0, 166, 126); color: white; padding: 5px; border-radius: 5px;">upload
+                        most of the audio, video or any image and it supports mp3, mp4, etc</span><svg width="24" height="24"
+                        viewBox="0 0 24 24">
+                        <path   
+                            d="M19.35 10.04A7.49 7.49 0 0 0 12 4C9.11 4 6.6 5.64 5.35 8.04A5.994 5.994 0 0 0 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5s-2.24-5-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"></path>
+                    </svg>
+                </button>
+                <input type="file" style="display: none;">
+                <button title="Share"
+                    style="background-color: rgba(255, 255, 255, 0.5); color: white; padding: 5px; border-radius: 5px; display: flex; margin-right: 5px; max-width: 35px; max-height: 37px;">
+                    <span
+                        style="display: none; position: absolute; background-color: rgb(0, 166, 126); color: white; padding: 5px; border-radius: 5px; top: 70px;">Chat</span><svg
+                        width="24" height="24" viewBox="0 0 24 24">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black"
+                            class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                            <path
+                                d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"></path>
+                            <path
+                                d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"></path>
+                        </svg>
+                    </svg>
+                </button>
+                <input type="file" style="display: none;">
+                <button title="Share"
+                    style="background-color: rgba(255, 255, 255, 0.5); color: white; padding: 5px; border-radius: 5px; display: flex; margin-right: 5px; max-width: 35px; max-height: 37px;">
+                    <span
+                        style="display: none; position: absolute; background-color: rgb(0, 166, 126); color: white; padding: 5px; border-radius: 5px; top: 70px;">Share</span><svg
+                        width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M 18 2 A 3 3 0 0 0 15 5 A 3 3 0 0 0 15.054688 5.5605469 L 7.9394531 9.7109375 A 3 3 0 0 0 6 9 A 3 3 0 0 0 3 12 A 3 3 0 0 0 6 15 A 3 3 0 0 0 7.9355469 14.287109 L 15.054688 18.439453 A 3 3 0 0 0 15 19 A 3 3 0 0 0 18 22 A 3 3 0 0 0 21 19 A 3 3 0 0 0 18 16 A 3 3 0 0 0 16.0625 16.712891 L 8.9453125 12.560547 A 3 3 0 0 0 9 12 A 3 3 0 0 0 8.9453125 11.439453 L 16.060547 7.2890625 A 3 3 0 0 0 18 8 A 3 3 0 0 0 21 5 A 3 3 0 0 0 18 2 z"></path>
+                    </svg>
+                </button>
+            </form>
+
+
+    <div class="close-wrapper"></div>
+    <section class="all-content p-0">
+    <div class="video-editor row p-0 m-0">
+    <div class="video-options-bar col-12">
+    <div class="video-options">
+    <div class="single-option" data-target="#videos">
+    <i class="fas fa-video"></i>
+    <span class="name">Videos</span>
+    </div>
+    <div class="single-option" data-target="#category-7">
+    <i class="far fa-images"></i> <span class="name">
+    Backgrounds</span>
+    </div>
+    <div class="single-option" data-target="#category-11">
+    <i class="far fa-heart"></i> <span class="name">
+    Clip Arts</span>
+    </div>
+    <div class="single-option" data-target="#category-14">
+    <i class="far fa-grin-hearts"></i> <span class="name">
+    Emojis</span>
+    </div>
+    <div class="single-option" data-target="#category-15">
+    <i class="fab fa-connectdevelop"></i> <span class="name">
+    Icons</span>
+    </div>
+    <div class="single-option" data-target="#text-panel">
+    <i class="fas fa-font"></i>
+    <span class="name">text</span>
+    </div>
+    <div class="single-option" data-target="#drawing">
+    <i class="fas fa-paint-brush"></i>
+    <span class="name">Drawing</span>
+    </div>
+    <div class="single-option" data-target="#image">
+    <i class="fas fa-image"></i>
+    <span class="name">Image</span>
+    </div>
+    <div class="single-option ml-auto" id="save-video">
+    <i class="far fa-save"></i>
+    <span class="name">Export</span>
+    </div>
+    </div>
+    </div>
+
+    <div class="clear-overlay-library"></div>
+    <div class="col-md-6 library px-0">
+    <div class="panel scrollbar scrollbar_dark" id="videos">
+    <div class="pull-away">
+    <h3 class="heading">Videos</h3>
+    <label class="import-file-label cp">
+    <input type="file" class="import-video-file d-none" accept="video/*" multiple>
+    <i class="fas fa-arrow-down"></i> Import
+    </label>
+    </div>
+    <div class="no-data-found content-center">
+    <div class="content text-center">
+    <i class="fas fa-video large-icon"></i>
+    <p class="more mt-2">Drag and Drop files here</p>
+    <p class="more">OR</p>
+    <label class="import-file-label cp" for="input-video-file">
+    <span class="btn submit-btn"><i class="fas fa-plus"></i> Browse Files</span>
+    </label>
+    </div>
+    </div>
+    <div class="dragOverlay">
+    <p class="more"><i class="fas fa-plus"></i> Add Files</p>
+    </div>
+    <div class="overlay-loader">
+    <div class="loader">
+    <span class="load load1"></span>
+    <span class="load load2"></span>
+    <span class="text">Loading</span>
+    </div>
+    </div>
+    <div class="row paginationData">
+    </div>
+    </div>
+    <div class="panel scrollbar scrollbar_dark" id="images">
+    <div class="pull-right" for="input-video-file">
+    <label class="p-2 import-file-label cp">
+    <i class="fas fa-arrow-down"></i> Import
+    </label>
+    </div>
+    <div class="row paginationData">
+    </div>
+    </div>
+    <input type="file" class="import-video-file d-none" id="input-video-file" accept="video/*" multiple>
+    <div class="panel scrollbar scrollbar_dark mediaPanel" id="category-7">
+    <h3 class="heading">Backgrounds</h3>
+    <div class="form-group">
+    <div class="input-group">
+    <span class="input-group-text"><i class="fas fa-search"></i></span>
+    <input type="text" placeholder="Search...." class="form-control search-query" data-action="fetchUserMedia" data-target="category-7">
+    </div>
+    </div>
+    <div class="row paginationData">
+    <div class="loader-container">
+    <div class="loader">
+    <span class="load load1"></span>
+    <span class="load load2"></span>
+    <span class="text">Loading</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="panel scrollbar scrollbar_dark mediaPanel" id="category-11">
+    <h3 class="heading">Clip Arts</h3>
+    <div class="form-group">
+    <div class="input-group">
+    <span class="input-group-text"><i class="fas fa-search"></i></span>
+    <input type="text" placeholder="Search...." class="form-control search-query" data-action="fetchUserMedia" data-target="category-11">
+    </div>
+    </div>
+    <div class="row paginationData">
+    <div class="loader-container">
+    <div class="loader">
+    <span class="load load1"></span>
+    <span class="load load2"></span>
+    <span class="text">Loading</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="panel scrollbar scrollbar_dark mediaPanel" id="category-14">
+    <h3 class="heading">Emojis</h3>
+    <div class="form-group">
+    <div class="input-group">
+    <span class="input-group-text"><i class="fas fa-search"></i></span>
+    <input type="text" placeholder="Search...." class="form-control search-query" data-action="fetchUserMedia" data-target="category-14">
+    </div>
+    </div>
+    <div class="row paginationData">
+    <div class="loader-container">
+    <div class="loader">
+    <span class="load load1"></span>
+    <span class="load load2"></span>
+    <span class="text">Loading</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="panel scrollbar scrollbar_dark mediaPanel" id="category-15">
+    <h3 class="heading">Icons</h3>
+    <div class="form-group">
+    <div class="input-group">
+    <span class="input-group-text"><i class="fas fa-search"></i></span>
+    <input type="text" placeholder="Search...." class="form-control search-query" data-action="fetchUserMedia" data-target="category-15">
+    </div>
+    </div>
+    <div class="row paginationData">
+    <div class="loader-container">
+    <div class="loader">
+    <span class="load load1"></span>
+    <span class="load load2"></span>
+    <span class="text">Loading</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="panel scrollbar scrollbar_dark" id="text-panel">
+    <h3 class="heading">Text</h3>
+    <div class="py-3 m-0">
+    <span class="label">Enter Text</span>
+    <div class="form-group col-lg-8 px-0">
+    <input type="text" class="form-control text" placeholder="Enter text here....">
+    </div>
+    <div class="form-group">
+    <button type="button" class="s_btn add-text"><i class="fa fa-plus"></i> Add</button>
+    </div>
+    </div>
+    </div>
+
+    <div class="panel scrollbar scrollbar_dark additional-form" id="drawing">
+    <h3 class="heading">Drawing</h3>
+    <div class="py-3 m-0">
+    <div class="form-group" style="margin-top: 20px;">
+    <div class="col-4"><span class="label">Brush Color</span></div>
+    <div class="col-lg-6 col-8 d-flex">
+    <input type="text" class="form-control color-picker brush-color" data-default="#fff">
+    </div>
+    </div>
+    <div class="form-group">
+    <div class="col-4"><span class="label">Brush Width</span></div>
+    <div class="col-lg-6 col-8 d-flex">
+    <input type="range" class="rangeSlider brush-width" min="1" max="50" id="customRange1" value="10">
+    </div>
+    </div>
+    <div class="form-group">
+    <div class="col-12">
+    <button class="s_btn drawing-btn">Start Drawing</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="panel scrollbar scrollbar_dark additional-form" id="image">
+    <h3 class="heading">Image</h3>
+    <div class="py-3 m-0">
+    <div class="form-group">
+    <div class="col-4">
+    <span class="label">Image Upload</span>
+    </div>
+    <div class="col-lg-6 col-8">
+    <input type="file" name="image-upload" class="editor-image-upload" accept="image/*">
+    </div>
+    </div>
+    </div>
+    <div class="row paginationData">
+    </div>
+    </div>
+    <div class="panel scrollbar scrolbar_dark p-4 additional-form" id="editing-panel">
+    <h3 class="heading">Editing</h3>
+    <div class="form-group">
+    <div class="col-4"><span class="label">Fill Color</span></div>
+    <div class="col-lg-6 col-8 d-flex">
+    <input type="text" class="form-control color-picker fill-color" data-default="#fff">
+    </div>
+    </div>
+    <div class="stroke-options disable">
+    <div class="form-group">
+    <div class="col-4"><span class="label">Stoke Color</span></div>
+    <div class="col-lg-6 col-8 d-flex">
+    <input type="text" class="form-control color-picker stroke-color" data-default="#000">
+    </div>
+    </div>
+    <div class="form-group">
+    <div class="col-4"><span class="label">Stoke Width</span></div>
+    <div class="col-lg-6 col-8 d-flex">
+    <input type="range" class="rangeSlider stroke-width" min="0" max="20" id="customRange1" value="0">
+    </div>
+    </div>
+    <div class="form-group">
+    <div class="col-4"><span class="label">Opacity</span></div>
+    <div class="col-lg-6 col-8 d-flex">
+    <input type="range" class="rangeSlider opacity" min="0" max="10" id="customRange1" value="10">
+    </div>
+    </div>
+    <div class="form-group text-group">
+    <div class="col-4"><span class="label">Text</span></div>
+    <div class="col-lg-6 col-8 d-flex">
+    <input type="text" class="form-control shape-text">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6 video-preview">
+    <div class="video h-100">
+    <div class="videoplayer">
+    <div class="vidoe-palyer-options">
+    <div class="controllers pull-away p-1 px-2 no-cursor">
+    <div class="videoplayer-time videoplayer-time-current">00:00</div>
+    <div class="videoplayer-time videoplayer-time-duration"> </div>
+    </div>
+    <div class="controllers">
+    <div class="videoplayer-bar">
+    <div class="videoplayer-bar-played" style="width: 0%;"></div>
+    </div>
+    </div>
+    <div class="controllers pull-away btm-options">
+    <div class="aic">
+    <div class="videoplayer-playpause"><a href="#"></a></div>
+    <div class="videoplayer-stop"></div>
+    </div>
+    <div style="display: flex;">
+    <div class="videoplayer-volume">
+    <div class="videoplayer-volume-button" title><a href="#"></a></div>
+    <div class="videoplayer-volume-adjust">
+    <input type="range" class="volume-range" min="1" max="100" value="100">
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="preventOverlay"></div>
+    <canvas id="canvasEditing" class="current"></canvas>
+    </div>
+    </div>
+    </div>
+    <div class="clearfix col-12 editing-options">
+    <span class="option delete-item disabled">
+    <i class="far fa-trash-alt"></i> Delete
+    </span>
+    <span class="option split-video disabled">
+    <img src="images/icons/cut.svg"> Split
+    </span>
+    <span class="video-export-timer"></span>
+    </div>
+    <div class="col-12 editing-area">
+    <div class="d-flex p-0 h-100">
+    <div class="col-12 px-0 editing-area-con scrollbar scrollbar_dark">
+    <div class="video-slider-label"></div>
+    <div class="video-area edit-area">
+    <div class="hoverLabel">
+    <img src="images/label-timeline.png">
+    </div>
+    </div>
+    <div class="img-area edit-area">
+    <div class="hoverLabel">
+    <img src="images/label-timeline.png">
+    </div>
+    </div>
+    <div class="video-slider"><span class="thumb"></span></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <div class="footer">
+    <a href="admin/login.html" class="submit-btn credits-btn" target="_blank">Admin</a>
+    </div>
+    <div class="videoAlert">
+    <div class="content">
+    <h2 class="heading">Message</h2>
+    <div class="body"></div>
+    <div class="foot"><button class="ok-btn btn btn-primary">Ok</button></div>
+    </div>
+    </div>
+
+    <div class="overlay-loader big-loader">
+    <div class="loader">
+    <span class="load load1"></span>
+    <span class="load load2"></span>
+    <span class="text">Loading</span>
+    </div>
+    </div>
+    <script type="6d29196527242537e9904f03-text/javascript">
+            const ENV = "";
+    </script>
+    <script src="js/source/script-v1.7.min129e.js?v=1.7" type="6d29196527242537e9904f03-text/javascript"></script>
+    <script src="js/source/script-index-v1.7.min129e.js?v=1.7" type="6d29196527242537e9904f03-text/javascript"></script>
+    <script  src="../../../cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="6d29196527242537e9904f03-|49" defer></script>
+    <script src = "https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.9.8/dist/ffmpeg.min.js">
+    </script>
+    <script> 
+
+    window.addEventListener('message', function(event) {
+        if (event.origin !== 'https://buttoned-luminous-shirt.glitch.me') return;
+        console.log('Received message:', event.data);
+    });
+
+    var numVideosToMerge;
+
+    var input_video = document.createElement('input');
+    input_video.type = 'file';
+    input_video.id = 'input_video';
+    console.log('input_video :>> ', input_video);
+    var start_time = document.createElement('input');
+    start_time.type = 'number';
+    start_time.id = 'start_time';
+    start_time.value = '1';
+
+    var end_time = document.createElement('input');
+    end_time.type = 'number';
+    end_time.id = 'end_time';
+    end_time.value = '2';
+
+    var splitButton = document.querySelector('.split-video');
+    console.log('splitButton :>> ', splitButton);
+    var trimButton = document.querySelector('.trimming_button');
+    // var trimButtonHandler = trimButton.onclick;
+    console.log("video trimmed ");
+    // splitButton.onclick = trimButtonHandler;
+
+    var button = document.createElement('button');
+    button.innerHTML = 'Trim Video';
+    button.className = 'trimming_button';
+    button.onclick = function() { trimVideo(); };
+    splitButton.onclick = function() { trimVideo(); };
+
+    var output_video = document.createElement('video');
+    output_video.id = 'output_video';
+
+    output_video.controls = true;
+    console.log('document.body :>> ', document.body);
+
+    document.body.appendChild(input_video);
+    document.body.appendChild(start_time);
+    document.body.appendChild(end_time);
+    document.body.appendChild(button);
+    document.body.appendChild(output_video);
+
+    // alert("merging will start")
+
+    var videoUrls = [];
+    var addButton = document.createElement("button");
+    addButton.innerHTML = "Add Video";
+
+    // addButton.addEventListener('click', function() {
+    //   var video = document.createElement("input");
+    //   video.type = "file";
+    //   video.accept = "video/*";
+    //   video.onchange = function() {
+    //     var file = this.files[0];
+    //     var url = URL.createObjectURL(file);
+    //     videoUrls.push(url);
+    //     mergeVideos(numVideosToMerge);
+    //   };
+    //   video.click();
+    // });
+
+        document.body.appendChild(addButton);
+
+        var mergeButton = document.createElement("button");
+        mergeButton.innerHTML = "Merge Videos";
+        document.body.appendChild(mergeButton);
+        var downloadLink = document.createElement("a");
+        downloadLink.innerHTML = "Download Merged Video";
+        document.body.appendChild(downloadLink);
+
+        const { createFFmpeg, fetchFile } = FFmpeg;4
+        const ffmpeg = createFFmpeg({ log: true });
+        var videoUrls = [];
+
+        function  trimVideo(startTime, endTime)  {
+            var startTime;
+        var endTime;
+    var videoArea = document.querySelector('.video-area');
+    var slider = document.querySelector('.video-slider');
+    var videos = Array.from(videoArea.querySelectorAll('.single-item'));
+
+    function getVideoPortions(video, slider) {
+        var videoRect = video.getBoundingClientRect();
+        var sliderRect = slider.getBoundingClientRect();
+        if (sliderRect.left >= videoRect.left && sliderRect.right <= videoRect.right) {
+
+        var originalDiv = document.querySelector('.single-item');
+        var newDiv = document.createElement('div');
+        newDiv.className = 'single-item without-events';
+        
+        originalDiv.parentNode.insertBefore(newDiv, originalDiv.nextSibling);
+
+            return {
+                left: sliderRect.left - videoRect.left,
+                right: videoRect.right - sliderRect.right
+            };
+        
+        } 
+        return null;
+    }
+
+    function findPortions() {
+        videos.forEach(function(video) {
+            var portions = getVideoPortions(video, slider);
+
+            if (portions) {
+                start_time.value = '0';
+                end_time.value = portions.left;
+            }
+        });
+    }
+
+    findPortions();
+
+    let videoDiv = document.querySelector('.single-media.video-file');
+        let blobUrl = videoDiv.getAttribute('data-for-video');
+        fetch(blobUrl)
+        .then(response => response.blob())
+        .then(blob => {
+            startTime = 
+            startTime || 
+            document.querySelector('#start_time').value * (138.6 / 454.3);
+            endTime = 
+            endTime || 
+            document.querySelector('#end_time').value * (138.6 / 454.3);
+            let reader = new FileReader();
+            reader.readAsDataURL(blob);
+            reader.onloadend = function() {
+                let base64data = reader.result;
+                fetch('https://capricious-adaptable-van.glitch.me/trim', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        'input_video': base64data,
+                        'start_time': startTime ? parseInt(startTime) : 0, 
+                        'end_time': endTime ? parseInt(endTime) : parseInt(document.querySelector('#end_time').value * (138.6 / 454.3)) // Use the value from the query selector as default end time
+                    })
+                })   
+                .then(response => response.blob())
+                .then(data => {
+                var videoUrl = URL.createObjectURL(data);
+                videoUrls.push(videoUrl);
+                document.querySelector('#output_video').src = videoUrl;
+                console.log('Video duration: ', document.querySelector('#output_video').duration);
+                console.log('Video duration: ', videoUrl.duration);
+                var newDiv = document.createElement('div');
+                newDiv.className = 'single-item without-events';
+                var newVideo = document.createElement('video');
+                newVideo.style.width = '100%';
+                newVideo.style.maxHeight = '100%';
+                newVideo.addEventListener('loadedmetadata', function() {
+                    newDiv.appendChild(newVideo);
+                    document.querySelector('.video-area').appendChild(newDiv);
+                });
+                newVideo.src = videoUrl;
+                })   
+                .catch(error => console.error(error));
+            }
+        })
+        .catch(error => console.error('Error:', error));
+        }
+    
+
+        
+        addButton.addEventListener('click', function() {
+        var videoInput = document.createElement("input");
+        videoInput.type = "file";
+        videoInput.accept = "video/*";
+        
+        videoInput.onchange = function() {
+            var file = this.files[0];
+            var url = URL.createObjectURL(file);
+            videoUrls.push(url);
+            console.log('videoUrls :>> ', videoUrls);
+            var videoDiv = document.createElement("div");
+            videoDiv.className = "single-item without-events";
+            var imgDiv = document.createElement("div");
+            imgDiv.className = "img";
+            videoDiv.appendChild(imgDiv);
+            var imgElem = document.createElement("img");
+            imgElem.src = "images/label-timeline.png";
+            var videoElem = document.createElement("video");
+            videoElem.src = url;
+            videoElem.controls = true;
+            videoElem.style.maxHeight = "100%";
+            videoElem.setAttribute('data-for-video', url); 
+            videoElem.className = "single-media video-file";
+            videoElem.id = "added-video"; 
+            imgDiv.appendChild(videoElem);
+            var videoArea = document.querySelector(".video-area.edit-area.ui-sortable");
+            console.log('videoArea :>> ', videoArea);
+            videoArea.appendChild(videoDiv);
+            mergeVideos(numVideosToMerge);
+            videoElem.addEventListener('loadedmetadata', function() {
+                var duration = videoElem.duration;
+                videoElem.style.width = (duration * 7) + "px";
+                console.log('videoElem :>> ', videoElem);
+            });
+        };
+
+        videoInput.click();
+
+        var thumb = document.querySelector("body > section > div > div.col-12.editing-area > div > div > div.video-slider .thumb");
+        var sliderElement = document.querySelector("body > section > div > div.col-12.editing-area > div > div > div.video-slider");
+        var line = document.createElement("div");
+
+        line.style.width = "0.1px";
+        line.style.height = '50px';
+        line.style.backgroundColor = "white";
+        line.style.position = "absolute";
+        // line.style.bottom = "0";
+        sliderElement.appendChild(line);
+
+    var isMouseDown = false;
+
+    thumb.addEventListener("mousedown", function(event) {
+        isMouseDown = true;
+    }); 
+
+    window.addEventListener("mouseup", function(event) {
+        isMouseDown = false;
+    });
+
+    sliderElement.addEventListener("mousemove", function(event) {
+        if (isMouseDown) {
+            var x = (event.clientX - sliderElement.getBoundingClientRect().left);
+            thumb.style.transform = "translateX(" + x + "px)";
+            line.style.transform = "translateX(" + x + "px)";
+
+            var slider = document.querySelector('.video-slider');
+            slider.style.transform = "translateX(" + x + "px)";
+            // console.log('slider4444444444 :>> ', slider);
+        }
+    }); 
+    });
+
+    async function mergeVideos(numVideos) {
+    try {
+        if (!ffmpeg.isLoaded()) {
+        await ffmpeg.load();
+        }
+        var concatList = '';
+        var i;
+        for (i = 0; i < numVideos && i < videoUrls.length; i++) {
+        var videoUrl = videoUrls[i];
+        console.log('videoUrl :>> ', videoUrl);
+        ffmpeg.FS('writeFile', 'video' + i + '.mp4', await fetchFile(videoUrl));
+        await ffmpeg.run('-i', 'video' + i + '.mp4', '-c', 'copy', '-bsf:v', 'h264_mp4toannexb', '-f', 'mpegts', 'intermediate' + i + '.ts');
+        concatList += 'intermediate' + i + '.ts|';
+        }
+        concatList = concatList.slice(0, -1); // Remove the last '|'
+        await ffmpeg.run('-i', 'concat:' + concatList, '-c', 'copy', '-bsf:a', 'aac_adtstoasc', 'output.mp4');
+        const data = ffmpeg.FS('readFile', 'output.mp4');
+        const video = URL.createObjectURL(new Blob([data.buffer], { type: 'video/mp4' }));
+        downloadLink.href = video;
+        downloadLink.download = 'output.mp4';
+        downloadLink.style.display = 'block';
+        if (i < numVideos) {      
+        addButton.click();
+        }
+    } catch (error) {
+        console.error('An error occurred:', error);
+    }
+    }
+
+    mergeButton.addEventListener('click', function() {
+        var numVideos = videoUrls.length; 
+        mergeVideos(numVideos);
+    });
+
+        var message_button = document.querySelector("#message-form");
+        document.getElementById('input_video').style.display = 'none';
+        document.getElementById('start_time').style.display = 'none';
+        document.getElementById('end_time').style.display = 'none';
+        document.getElementsByClassName('trimming_button')[0].style.display = 'none';
+        // document.getElementById('output_video').style.display = 'none';
+
+
+    function checkLoader() {
+    var loader1 = document.querySelector('.loader-con');
+    if (loader1) {
+        loader1.style.display = 'none';
+    }
+    } 
+
+    var intervalId = setInterval(checkLoader, 1000);
+
+    message_button.addEventListener("submit", function(e) {
+        e.preventDefault();
+        var content = document.querySelector("#message-input").value
+        var gifUrl;  
+        fetch(`https://api.giphy.com/v1/gifs/search?api_key=B3605Y95fDsAEosLrcNQmahCQpL8SwF8&q=${encodeURIComponent(content)}`)
+        .then(response => response.json())
+        .then(data => {
+        gifUrl = data.data[0].images.original.url;
+        var title = data.data[0].title; 
+        var duration = 50  
+        let parentElement = document.querySelector('#videos');
+        if (!parentElement) {
+        parentElement = document.createElement('div');
+        parentElement.id = 'videos';
+        document.body.appendChild(parentElement);
+        }
+        let paginationData = parentElement.querySelector('.row.paginationData');
+        if (!paginationData) {
+        paginationData = document.createElement('div');
+        paginationData.className = 'row paginationData';
+        parentElement.appendChild(paginationData);
+        }
+        let childDiv1 = document.createElement('div');
+        childDiv1.className = "col-6 col-md-4 col-lg-5 col-xl-4 mt-3";
+        paginationData.appendChild(childDiv1);
+        let childDiv2 = document.createElement('div');
+        childDiv2.className = 'single-media video-file';  
+        childDiv2.setAttribute('draggable', 'true');
+        childDiv2.setAttribute('title', title + '.mp4');  
+        childDiv2.setAttribute('data-duration', duration); 
+        childDiv1.appendChild(childDiv2);
+        var imgElement = document.createElement("img");
+        imgElement.className = "media_file";
+        imgElement.setAttribute('muted', '');
+        childDiv2.appendChild(imgElement);
+
+        var videoElement = document.createElement("video");
+        videoElement.className = "media_file";
+        videoElement.setAttribute('muted', '');
+        videoElement.setAttribute('autoplay', '');
+        videoElement.setAttribute('loop', '');
+        childDiv2.appendChild(videoElement);
+
+        var addToTimelineButton = document.createElement("button");
+        addToTimelineButton.className = "addToTimeline";
+        addToTimelineButton.innerHTML = '<i class="fa fa-plus"></i>';
+        childDiv2.appendChild(addToTimelineButton);
+        var triggerButton = document.querySelector("body > button:nth-child(18)");
+        triggerButton.addEventListener('click', function() {
+        // Use setTimeout to delay the click on addToTimelineButton
+        setTimeout(function() {
+            addToTimelineButton.click();
+        }, 2000); // Delay of 2000 milliseconds (2 seconds)
+    });
+        var deleteVideoButton = document.createElement("button");
+        deleteVideoButton.className = "deleteVideo";
+        deleteVideoButton.innerHTML = '<i class="far fa-trash-alt"></i>';
+        childDiv2.appendChild(deleteVideoButton);
+        
+        fetch(gifUrl)
+        .then(response => response.blob())
+            .then(blob => {
+            var reader = new FileReader();
+            reader.onloadend = function() {
+                var base64data = reader.result;
+                imgElement.src = base64data;
+                videoElement.src = base64data;
+                var blobUrl = URL.createObjectURL(blob);
+                childDiv2.setAttribute('data-for-video', blobUrl);
+            }
+            reader.readAsDataURL(blob);
+            });
+        })
+
+    // alert("merging will start")
+    // var video1 = document.createElement("input");
+    // video1.type = "file";
+    // video1.id = "video1";
+    // video1.accept = "video/*";
+
+    // // Create the second input element
+    // var video2 = document.createElement("input");
+    // video2.type = "file";
+    // video2.id = "video2";
+    // video2.accept = "video/*";
+
+    // // Create the button
+    // var mergeButton = document.createElement("button");
+    // mergeButton.id = "merge";
+    // mergeButton.innerHTML = "Merge Videos";
+
+    // // Create the download link
+    // var downloadLink = document.createElement("a");
+    // downloadLink.id = "download";
+    // downloadLink.style.display = "none";
+    // downloadLink.innerHTML = "Download Merged Video";
+
+    // // Append the elements to the body (or any other container element)
+    // document.body.appendChild(video1);
+    // document.body.appendChild(video2);
+    // document.body.appendChild(mergeButton);
+    // document.body.appendChild(downloadLink);
+    // const { createFFmpeg, fetchFile } = FFmpeg;
+    // const ffmpeg = createFFmpeg({ log: true });
+
+    // document.getElementById('merge').addEventListener('click', async () => {
+    //   const video1 = document.getElementById('video1').files[0];
+    //   const video2 = document.getElementById('video2').files[0];
+    
+    //   await ffmpeg.load();
+    
+    //   ffmpeg.FS('writeFile', 'video1.mp4', await fetchFile(video1));
+    //   ffmpeg.FS('writeFile', 'video2.mp4', await fetchFile(video2));
+    
+    //   await ffmpeg.run('-i', 'video1.mp4', '-c', 'copy', '-bsf:v', 'h264_mp4toannexb', '-f', 'mpegts', 'intermediate1.ts');
+    //   await ffmpeg.run('-i', 'video2.mp4', '-c', 'copy', '-bsf:v', 'h264_mp4toannexb', '-f', 'mpegts', 'intermediate2.ts');
+    //   await ffmpeg.run('-i', 'concat:intermediate1.ts|intermediate2.ts', '-c', 'copy', '-bsf:a', 'aac_adtstoasc', 'output.mp4');
+    
+    //   const data = ffmpeg.FS('readFile', 'output.mp4');
+    
+    //   const video = URL.createObjectURL(new Blob([data.buffer], { type: 'video/mp4' }));
+    //   document.getElementById('download').href = video;
+    //   document.getElementById('download').download = 'output.mp4';
+    //   document.getElementById('download').style.display = 'block';
+    // });
+
+
+
+    x
+
+    setTimeout(function() {
+        var elements = document.getElementsByClassName("single-media video-file");
+        console.log('elements :>> ', elements);
+        for (var i = 0; i < elements.length; i++) { 
+            console.log('elements.length :>> ', elements.length);
+            elements[i].addEventListener("dragstart", function(event) {
+                var imageUrl = gifUrl;
+                console.log('imageUrl :>> ', imageUrl);
+                var element = document.querySelector(".canvas-container");
+                var img = document.createElement('img');
+                img.src = imageUrl;
+                img.className = "canvas-container"; 
+                // element.appendChild(img);
+                
+                var newDiv = document.createElement('div');
+                newDiv.className = "single-item without-events active";
+                var innerDiv = document.createElement('div');
+                innerDiv.className = "img";
+                var thumbnail = document.createElement('img');
+                thumbnail.src = imageUrl; // Set the src to the gifUrl
+                thumbnail.className = "thumbnail";
+                thumbnail.alt = "thumbnail";
+                innerDiv.appendChild(thumbnail);
+                newDiv.appendChild(innerDiv);
+                var editingArea = document.querySelector(".video-area.edit-area.ui-sortable");
+                editingArea.appendChild(newDiv);
+                var parentElement = document.querySelector(".video-area.edit-area.ui-sortable");
+                console.log('parentElement :>> ', parentElement);
+                var imgElements = parentElement.getElementsByTagName('img');
+                var gifUrls = [];
+                
+                for (var i = 0; i < imgElements.length; i++) {
+                    gifUrls.push(imgElements[i].src);
+                }
+                console.log(gifUrls);
+                gifUrls = gifUrls.slice(1);
+                console.log(gifUrls);
+                var serverUrl = "https://intermediate-catkin-ruby.glitch.me/";
+        
+    var thumb = document.querySelector("body > section > div > div.col-12.editing-area > div > div > div.video-slider .thumb");
+    var sliderElement = document.querySelector("body > section > div > div.col-12.editing-area > div > div > div.video-slider");
+
+    var line = document.createElement("div");
+    line.style.width = "0.1px";
+    line.style.height = '1200px';
+    line.style.backgroundColor = "white";
+    line.style.position = "absolute";
+    line.style.bottom = "0";
+    sliderElement.appendChild(line);
+
+    var isMouseDown = false;
+    thumb.addEventListener("mousedown", function(event) {
+        isMouseDown = true;
+    }); 
+    window.addEventListener("mouseup", function(event) {
+        isMouseDown = false;
+    }); 
+    sliderElement.addEventListener("mousemove", function(event) {
+        if (isMouseDown) {
+            var x = (event.clientX - sliderElement.getBoundingClientRect().left);
+            thumb.style.transform = "translateX(" + (x / 2) + "px)"; // divide by 2 for half the movement of thumb
+            line.style.transform = "translateX(" + (x / 2)  + "px)";
+
+            // Move the .video-slider along with the thumb
+            var slider = document.querySelector('.video-slider');
+            slider.style.transform = "translateX(" + (x / 2)  + "px)";
+            console.log('slider4444444444 :>> ', slider);
+        }
+    }); 
+    fetch(serverUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            urls: gifUrls
+        }),
+    })  
+    .then(response => response.blob())
+    .then(data => {
+        console.log('Success:', data);
+        var urlCreator = window.URL || window.webkitURL;
+        console.log('urlCreator :>> ', urlCreator);
+        var imageUrl = urlCreator.createObjectURL(data);
+        var canvas_container = document.querySelector(".canvas-container")
+        var img = document.createElement('img');
+        img.src = imageUrl;
+        img.className = "canvas-container"; 
+        canvas_container.appendChild(img);
+        console.log('imageUrl :>> ', imageUrl);
+        console.log('canvas_container :>> ', canvas_container);
+        var saveVideoButton = document.querySelector("#save-video");
+                        saveVideoButton.addEventListener("click", function() {
+                            var gifElement = document.querySelector("body > section > div > div.col-md-6.video-preview > div > div > div.canvas-container > img");
+                            if (gifElement) {
+                                var a = document.createElement('a');
+                                a.href = gifElement.src;
+                                a.download = 'output.gif';
+                                a.click();
+                            } else {
+                                console.log("No GIF found");
+                            }
+                        }); 
+                    })
+        
+                    .catch((error) => {
+                            console.error('Error:', error);
+                        });
+                        });
+                    }
+                }, 1000);     
+            });
+
+    document.getElementById('save-video').addEventListener('click', function() {
+        console.log("button clicked ");
+        var videoElements = document.querySelectorAll('.single-item video');
+        videoElements.forEach(function(videoElement, index) {
+            var url = videoElement.src;
+            console.log('url :>> ', url);
+            console.log('videoElement :>> ', videoElement);
+            var a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'video_part_' + (index + 1) + '.mp4'; // name each part separately
+            document.body.appendChild(a);
+            a.click();
+            
+            setTimeout(function() {
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);  
+            }, 100);
+        });
+    });
+
+    var submitButton1 = document.querySelector('input[type="submit"]');
+
+    submitButton1.addEventListener('click', function() {
+        var textarea = document.getElementById('message-input');
+        if (textarea.value) {
+            var match = textarea.value.match(/\d+/g);
+            console.log('match :>> ', match);
+            if (textarea.value.toLowerCase().startsWith('trim')) {           
+                var startTime = match && match.length > 0 ? match[0] : 0;
+                var endTime = match && match.length > 1 ? match[1] : 0;
+                trimVideo(startTime, endTime);
+                console.log("function will work now")
+            } 
+            else if (textarea.value.toLowerCase().startsWith('merge')) {
+                numVideosToMerge = match ? parseInt(match[0]) : 0;
+                console.log('numVideos :>> ', numVideosToMerge);
+                mergeVideos(numVideosToMerge);
+            }
+        }
+    });
+    </script>
+    <!-- </body> -->
+    </html>

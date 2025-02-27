@@ -1,0 +1,26 @@
+var imageUrl = "https://media3.giphy.com/media/w8VuZaBbV7Adi/giphy.gif?cid=da20ff0bv2x6f6kugzm7iydma4gj0f3akxkmmxled3m7lwod&ep=v1_gifs_search&rid=giphy.gif&ct=g";
+
+
+var element = document.querySelector(".canvas-container");
+
+var img = document.createElement('img');
+
+img.src = imageUrl;
+
+img.className = "canvas-container"; 
+
+element.appendChild(img);
+
+<!-- var css = '.remodal-bg { position: fixed; display: none; } .remodal-wrapper { position: relative; display: inline-block; }',
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+style.type = 'text/css';
+if (style.styleSheet){
+  // This is required for IE8 and below.
+  style.styleSheet.cssText = css;
+} else {
+  style.appendChild(document.createTextNode(css));
+} -->
+
+<!-- head.appendChild(style); -->

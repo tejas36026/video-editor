@@ -1,0 +1,19 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 27 Nov 2023 10:43:17 at https://dev.naxotop.com/project/video-editor-kDg5/v1/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://dev.naxotop.com/project/video-editor-kDg5/v1/ -O1 "D:\Brython-3.11.1\anything" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+10:43:32	Error: 	"Not Found" (404) at link https://dev.naxotop.com/images/favicon.png (from https://dev.naxotop.com/project/video-editor-kDg5/v1/)
+10:43:58	Error: 	"Not Found" (404) at link https://dev.naxotop.com/project/video-editor-kDg5/v1/css/images/ui-icons_444444_256x240.png (from https://dev.naxotop.com/project/video-editor-kDg5/v1/css/jquery-ui.min.css?v=1.7)
+10:43:58	Error: 	"Not Found" (404) at link https://dev.naxotop.com/project/video-editor-kDg5/v1/css/images/ui-icons_555555_256x240.png (from https://dev.naxotop.com/project/video-editor-kDg5/v1/css/jquery-ui.min.css?v=1.7)
+10:43:58	Error: 	"Not Found" (404) at link https://dev.naxotop.com/project/video-editor-kDg5/v1/css/images/ui-icons_ffffff_256x240.png (from https://dev.naxotop.com/project/video-editor-kDg5/v1/css/jquery-ui.min.css?v=1.7)
+10:43:58	Error: 	"Not Found" (404) at link https://dev.naxotop.com/project/video-editor-kDg5/v1/css/images/ui-icons_777620_256x240.png (from https://dev.naxotop.com/project/video-editor-kDg5/v1/css/jquery-ui.min.css?v=1.7)
+10:43:58	Error: 	"Not Found" (404) at link https://dev.naxotop.com/project/video-editor-kDg5/v1/css/images/ui-icons_cc0000_256x240.png (from https://dev.naxotop.com/project/video-editor-kDg5/v1/css/jquery-ui.min.css?v=1.7)
+10:43:58	Error: 	"Not Found" (404) at link https://dev.naxotop.com/project/video-editor-kDg5/v1/css/images/ui-icons_777777_256x240.png (from https://dev.naxotop.com/project/video-editor-kDg5/v1/css/jquery-ui.min.css?v=1.7)
+10:43:59	Error: 	"Not Found" (404) at link https://dev.naxotop.com/project/video-editor-kDg5/images/scroll.png (from https://dev.naxotop.com/project/video-editor-kDg5/v1/css/style.css?v=1.7)
+
+HTTrack Website Copier/3.49-2 mirror complete in 42 seconds : 44 links scanned, 35 files written (4368989 bytes overall) [1852598 bytes received at 44109 bytes/sec], 3990344 bytes transferred using HTTP compression in 36 files, ratio 36%, 14.6 requests per connection
+(8 errors, 0 warnings, 0 messages)

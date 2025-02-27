@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>  
+    <meta http-equiv="origin-trial" content="Ap46PY/VeAkRalqSJ+IeXZNxP0cUEMbwcpULNlJlBcxyZJB2rz+6o3D4Uh5kXBk17EaCEpZKH4+wMuQT8zk8ygYAAABgeyJvcmlnaW4iOiJodHRwOi8vMTI3LjAuMC4xOjU1MDAiLCJmZWF0dXJlIjoiVW5yZXN0cmljdGVkU2hhcmVkQXJyYXlCdWZmZXIiLCJleHBpcnkiOjE3MTkzNTk5OTl9">
+    <head>
+        <title>Add Logo to Video</title>
+    </head>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.9.8/dist/ffmpeg.min.js"></script>
+    <body>
+        <button onclick="addLogoToVideo()">Add Logo to Video</button>
+        <script>
+            
+            async function addLogoToVideo() {
+                const { createFFmpeg, fetchFile } = FFmpeg;
+                const ffmpeg = createFFmpeg({ log: true });
+                await ffmpeg.load();
+                const logoFile = await fetchFile('./myimage.png');
+                ffmpeg.FS('writeFile', 'logo.png', logoFile);
+                const videoFile = await fetchFile('./input.mp4');
+                ffmpeg.FS('writeFile', 'input.mp4', videoFile);
+                await ffmpeg.run('-i', 'input.mp4', '-i', 'logo.png', '-filter_complex', 'overlay=W-w-10:H-h-10', '-preset', 'ultrafast', 'output.mp4');
+                const data = ffmpeg.FS('readFile', 'output.mp4');
+                const url = URL.createObjectURL(new Blob([data.buffer], { type: 'video/mp4' }));
+                const a = document.createElement('a');
+                a.href = url;
+                a.download  = 'output.mp4';
+                a.click();   
+            }        
+        </script>
+    </body> 
+</html>

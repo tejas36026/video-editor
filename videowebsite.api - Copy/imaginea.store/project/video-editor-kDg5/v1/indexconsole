@@ -1,0 +1,117 @@
+// async function processVideoAndImage(videoUrl, imageUrl) {
+//     let videoResponse = await fetch(videoUrl);
+//     let videoBlob = await videoResponse.blob();
+//     let videoObjectUrl = URL.createObjectURL(videoBlob);
+
+//     let imageResponse = await fetch(imageUrl);
+//     let imageBlob = await imageResponse.blob();
+//     let imageObjectUrl = URL.createObjectURL(imageBlob);
+
+//     let videoElement = document.createElement('video');
+//     videoElement.src = videoObjectUrl;
+//     document.body.appendChild(videoElement);
+//     await videoElement.play();
+
+//     let canvasElement = document.createElement('canvas');
+//     let ctx = canvasElement.getContext('2d');
+//     let img = new Image();
+//     img.onload = async function() {
+//         ctx.drawImage(img, 0, 0);
+//         document.body.appendChild(canvasElement);
+
+//         let videoStream = videoElement.captureStream();
+//         let canvasStream = canvasElement.captureStream();
+//         let combinedStream = new MediaStream([...videoStream.getTracks(), ...canvasStream.getTracks()]);
+
+//         let mediaRecorder = new MediaRecorder(combinedStream);
+//         let chunks = [];
+
+//         mediaRecorder.ondataavailable = function(event) {
+//             chunks.push(event.data);
+//         };
+
+//         mediaRecorder.start();
+//         setTimeout(() => {
+//             mediaRecorder.stop();
+//             let blob = new Blob(chunks, { type: 'video/mp4' });
+//             let url = URL.createObjectURL(blob);
+//             let link = document.createElement('a');
+//             link.href = url;
+//             link.download = 'output.mp4';
+//             link.click();
+//         }, 30000);
+//     };
+//     img.src = imageObjectUrl;
+// }
+
+// processVideoAndImage(videoUrls[0], imageUrls[0]);
+
+
+
+
+
+
+
+
+
+
+async function processVideosAndImages(videoUrls, imageUrls) {
+    // Check if there is at least one video URL and one image URL
+    if (videoUrls.length < 1 || imageUrls.length < 1) {
+        console.log('At least one video URL and one image URL are required');
+        return;
+    }
+
+    for (let i = 0; i < videoUrls.length; i++) {
+        await processVideoAndImage(videoUrls[i], imageUrls[i]);
+    }
+}
+
+async function processVideoAndImage(videoUrl, imageUrl) {
+    let videoResponse = await fetch(videoUrl);
+    let videoBlob = await videoResponse.blob();
+    let videoObjectUrl = URL.createObjectURL(videoBlob);
+
+    let imageResponse = await fetch(imageUrl);
+    let imageBlob = await imageResponse.blob();
+    let imageObjectUrl = URL.createObjectURL(imageBlob);
+
+    let videoElement = document.createElement('video');
+    videoElement.src = videoObjectUrl;
+    document.body.appendChild(videoElement);
+    await videoElement.play();
+
+    let canvasElement = document.createElement('canvas');
+    let ctx = canvasElement.getContext('2d');
+    let img = new Image();
+    img.onload = async function() {
+        ctx.drawImage(img, 0, 0);
+        document.body.appendChild(canvasElement);
+
+        let videoStream = videoElement.captureStream();
+        let canvasStream = canvasElement.captureStream();
+        let combinedStream = new MediaStream([...videoStream.getTracks(), ...canvasStream.getTracks()]);
+
+        let mediaRecorder = new MediaRecorder(combinedStream);
+        let chunks = [];
+
+        mediaRecorder.ondataavailable = function(event) {
+            chunks.push(event.data);
+        };
+
+        mediaRecorder.start();
+        setTimeout(() => {
+            mediaRecorder.stop();
+            let blob = new Blob(chunks, { type: 'video/mp4' });
+            let url = URL.createObjectURL(blob);
+            let link = document.createElement('a');
+            link.href = url;
+            link.download = 'output.mp4';
+            link.click();
+        }, 30000);
+    };
+    img.src = imageObjectUrl;
+}
+
+// Call the function with arrays of video URLs and image URLs
+processVideosAndImages(videoUrls, imageUrls);

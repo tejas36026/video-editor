@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="file" id="inputVideo">
+<button id="trimVideo">Trim Video</button>
+<video id="outputVideo" controls></video>
+<script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.7/dist/umd/ffmpeg.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ffmpeg/0.12.7/umd/ffmpeg.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ffmpeg/0.12.7/umd/814.ffmpeg.min.js"></script>
+
+<script>
+   
+
+
+    document.getElementById('trimVideo').addEventListener('click', function() {
+    var file = document.getElementById('inputVideo').files[0];
+    var reader = new FileReader();
+    reader.onload = function() {
+        var buffer = new Uint8Array(reader.result);
+        FFmpeg({
+            arguments: ['-i', 'input.mp4', '-ss', '00:01:00', '-t', '00:02:00', 'output.mp4'],
+            files: [
+                {
+                    data: buffer,
+                    name: 'input.mp4'
+                }
+            ]
+        }).then(function(result) {
+            var out = result.MEMFS[0].data;
+            var blob = new Blob([out.buffer], { type: 'video/mp4' });
+            document.getElementById('outputVideo').src = URL.createObjectURL(blob);
+        });
+    };
+    reader.readAsArrayBuffer(file);
+    });
+
+</script>
+
+</body>
+</html>

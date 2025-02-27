@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+<video width="320" height="240" controls>
+  <source src="https://media3.giphy.com/media/w8VuZaBbV7Adi/giphy.gif?cid=da20ff0bv2x6f6kugzm7iydma4gj0f3akxkmmxled3m7lwod&ep=v1_gifs_search&rid=giphy.gif&ct=g" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<video width="320" height="240" controls>
+  <img src="https://media1.giphy.com/media/qu865rEor7r6xjaOyQ/giphy.gif?cid=da20ff0bt4yzasbagtz7cwc1gfqwrsykguq2mh0irkowtazb&ep=v1_gifs_search&rid=giphy.gif&ct=g" >
+  Your browser does not support the video tag.
+</video>
+<img src="https://media3.giphy.com/media/w8VuZaBbV7Adi/giphy.gif?cid=da20ff0bv2x6f6kugzm7iydma4gj0f3akxkmmxled3m7lwod&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Your GIF">
+<img src="https://media1.giphy.com/media/qu865rEor7r6xjaOyQ/giphy.gif?cid=da20ff0bt4yzasbagtz7cwc1gfqwrsykguq2mh0irkowtazb&ep=v1_gifs_search&rid=giphy.gif&ct=g" > -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GIF Slideshow</title>
+</head>
+<body>
+    <img id="myImage" src="" alt="Your GIF">
+    <script>
+        function isGifAnimated(file) {
+            return new Promise((resolve, reject) => {
+                try {
+                    let fileReader = new FileReader();
+                    fileReader.readAsArrayBuffer(file);
+                    fileReader.onload = (event) => {
+                        let arr = new Uint8Array(fileReader.result);
+                        let duration = 0;
+                        for (var i = 0; i < arr.length; i++) {
+                            if (arr[i] == 0x21
+                                && arr[i + 1] == 0xF9
+                                && arr[i + 2] == 0x04
+                                && arr[i + 7] == 0x00) {
+                                const delay = (arr[i + 5] << 8) | (arr[i + 4] & 0xFF)
+                                duration += delay < 2 ? 10 : delay;
+                            }
+                        }
+                        resolve(duration / 100);
+                    }
+                } catch (e) {
+                    reject(e);
+                }
+            });
+        }
+        var images = [
+            "https://media3.giphy.com/media/w8VuZaBbV7Adi/giphy.gif?cid=da20ff0bv2x6f6kugzm7iydma4gj0f3akxkmmxled3m7lwod&ep=v1_gifs_search&rid=giphy.gif&ct=g",
+            "https://media1.giphy.com/media/qu865rEor7r6xjaOyQ/giphy.gif?cid=da20ff0bt4yzasbagtz7cwc1gfqwrsykguq2mh0irkowtazb&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+        ];
+        var i = 0;
+        function changeImage() {
+            var img = document.getElementById('myImage');
+            img.src = images[i];
+
+            fetch(images[i])
+                .then(response => response.blob())
+                .then(blob => {
+                    isGifAnimated(blob).then(duration => {
+                        console.log('duration :>> ', duration);
+                        i = (i + 1) % images.length;
+                        setTimeout(changeImage, duration * 1000); // Change after the duration of the GIF
+                    });
+                });
+        }
+        window.onload = changeImage;
+    </script>
+</body>
+</html>
